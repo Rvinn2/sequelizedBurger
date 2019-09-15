@@ -2,8 +2,8 @@ module.exports = function(sequelize, DataTypes) {
   
   
   
-    var devourers = sequelize.define('devourers', {
-      devourer_name: DataTypes.STRING,
+    var Devourers = sequelize.define('devourers', {
+      devoured: DataTypes.STRING,
       devourerId: DataTypes.INTEGER
     }, {
       classMethods: {
@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       }
     });
-    return devourers;
+    return Devourers;
   };
   
   

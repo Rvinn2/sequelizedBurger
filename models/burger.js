@@ -2,8 +2,8 @@ module.exports = function(sequelize, DataTypes) {
   
   
   
-  var burger = sequelize.define('burger', {
-    burger_name: DataTypes.STRING,
+  var Burger = sequelize.define('burger', {
+    name_: DataTypes.STRING,
     devoured: DataTypes.BOOLEAN,
     devourerId: DataTypes.INTEGER
   }, {
@@ -13,6 +13,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return burger;
+  return Burger;
 };
 
