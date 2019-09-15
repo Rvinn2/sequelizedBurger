@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../public/assets/css/style.css" type="text/css"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class=container><h1 style="color:rgb(12, 3, 3); text-align: center">Eat Da Burger</h1>
+
+  <div class="row">
+    <div class="col-6">
+    
+
+<h2 style="color:rgb(12, 3, 3)">Burgers Not Eaten</h2>
+
+<ul>
+  {{#each burger}}
+    {{!-- {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}} --}}
+    <li>{{this.id}} {{this.name_}}</li>
+    
+  {{/each}}
+</ul>
+  
+    </div>
+    <div class="col-6">
+     
+<h2 style="color:rgb(12, 3, 3)">Burgers that have been DEVOURED.</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+    </div>
+   
+  </div>
+</div>
+<h2 style="color:rgb(12, 3, 3)">Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label style="color:rgb(12, 3, 3)" for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div  style="color:rgb(12, 3, 3)" class="form-group">
+    <label  style="color:rgb(12, 3, 3)"for="devour"> Has Das Burger Been Devoured?</label><br>
+    <input style="color:rgb(12, 3, 3)" type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <input  style="color:rgb(12, 3, 3)" type="radio" name="devoured" value="0"> Still up for grabs. . .
+  </div>
+
+  <button  type="submit">Add burger</button>
+</form>
+
+</body>
+</html>
